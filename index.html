@@ -29,7 +29,53 @@
 
     <main>
       <div id="main-container">
+        <h2>Crie seu convite</h2>
 
+        <form>
+          <fieldset class="about-event">
+            <legend>
+              <img src="assets/images/icons/calendar.svg" alt="ícone do calendario">
+              Sobre o Evento
+            </legend>
+            <div class="input-wrapper">
+              <label for="eventname">Título</label>
+              <input type="text" placeholder="Name do Evento" id="eventname" name="eventname">
+            </div>
+
+            <div class="flex">
+              <div class="input-wrapper">
+                <label for="start">Início</label>
+                <input type="datetime-local" id="start" name="start">
+              </div>
+              <div class="input-wrapper">
+                <label for="end">Fim</label>
+                <input type="datetime-local" id="end" name="end">
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="radio-wrapper">
+                <div class="radio-inner">
+                  <input type="radio" name="modality" value="face-to-face" id="face-to-face">
+                  <img src="assets/images/icons/building.svg" alt="ícone do prédio">
+                  <label for="modality">Presencial</label>
+                </div>
+
+                <div class="radio-inner">
+                  <input type="radio" name="modality" value="online" id="online">
+                  <img src="assets/images/icons/video.svg" alt="ícone do prédio">
+                  <label for="modality">Online</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="textarea-wrapper">
+              <label for="description">Descrição</label>
+              <textarea name="description" id="description" rows="30" cols="10"
+                placeholder="Escreva sobre os detalhes do evento"></textarea>
+            </div>
+          </fieldset>
+        </form>
       </div>
     </main>
   </div>
