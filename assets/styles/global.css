@@ -6,16 +6,16 @@
   --font-leckerli: "Leckerli One", cursive;
 
   /* cursive */
-  --font-logo: 400 2.5rem/auto var(--font-leckerli);
+  --font-logo: 400 2.5rem/normal var(--font-leckerli);
 
   /* Heading */
-  --heading-md: 700 1.75rem/auto var(--font-baloo);
-  --heading-sm: 700 1.125rem/auto var(--font-baloo);
+  --heading-md: 700 1.75rem/normal var(--font-baloo);
+  --heading-sm: 700 1.125rem/normal var(--font-baloo);
 
   /* text */
-  --body-md: 500 1rem/auto var(--font-opens-sans);
-  --body-sm: 500 .875rem/auto var(--font-opens-sans);
-  --body-xs: 500 0.75rem/auto var(--font-opens-sans);
+  --body-md: 500 1rem/normal var(--font-opens-sans);
+  --body-sm: 500 .875rem/normal var(--font-opens-sans);
+  --body-xs: 500 0.75rem/normal var(--font-opens-sans);
 
   /* colors variables */
 
@@ -42,4 +42,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font: var(--body-md);
+  color: var(--text-body);
+  background-color: var(--shape-background);
+}
+
+h1 {
+  font: var(--font-logo);
 }
