@@ -1,0 +1,74 @@
+.radio-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border: 1px solid var(--shape-over);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  gap: 0.25rem;
+}
+
+.radio-inner {
+  position: relative;
+  border-radius: 0.25rem;
+  font: var(--body-sm);
+  padding: 0.60rem 0.75rem;
+
+
+  & input[type="radio"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  & .icon-video, .icon-building {
+    display: block;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .icon-video {
+    background: url(../../images/icons/video.svg) center/cover no-repeat;
+  }
+
+  .icon-building {
+    background: url(../../images/icons/building.svg) center/cover no-repeat;
+  }
+
+  &:hover, &:focus-within {
+    background-color: var(--input-stroke);
+    font-weight: 500;
+    color: var(--text-heading);
+  }
+
+  &:has(:checked) {
+    background-color: var(--input-stroke);
+    font-weight: 500;
+    color: var(--text-heading);
+
+    .icon-building {
+      background: url(../../images/icons/building-checked.svg);
+    }
+
+    .icon-video {
+      background: url(../../images/icons/video-cheked.svg);
+    }
+  }
+
+  .modality-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    & label {
+      all: unset;
+
+    }
+  }
+
+}

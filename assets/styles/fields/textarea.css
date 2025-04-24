@@ -1,0 +1,6 @@
+#description {
+  max-height: 136px;
+  resize: vertical;
+  overflow: auto;
+  word-wrap: break-word;
+}
