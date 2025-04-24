@@ -83,6 +83,7 @@
   align-items: center;
   gap: 0.75rem;
 
+  margin-bottom: 1.75rem;
 }
 
 .radio-wrapper-colors {
@@ -164,4 +165,50 @@
   .blue-light {
     background: #59FFF9;
   }
+}
+
+.radio-theme-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+
+  margin-bottom: 1.125rem;
+
+  & input[type="radio"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .input-theme {
+    position: relative;
+    background-color: var(--shape-button);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    border: 2px solid transparent;
+
+
+    .input-theme-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.8rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    &:hover, &:focus-within {
+      border: 2px solid var(--brand-light);
+    }
+
+    &:has(:checked) {
+      border: 2px solid var(--brand-light);
+    }
+  }
+
+
 }
