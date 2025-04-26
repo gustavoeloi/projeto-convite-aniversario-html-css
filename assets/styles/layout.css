@@ -61,3 +61,15 @@ aside {
   display: flex;
   gap: 1rem;
 }
+
+.align-items {
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}

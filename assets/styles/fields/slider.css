@@ -1,0 +1,52 @@
+.toggle-wrapper {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.toggle-input {
+  position: relative;
+
+  & .button {
+    content: "";
+    display: block;
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    width: 4rem;
+    height: 2rem;
+    border-radius: 12.5rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  & .button::before {
+    position: absolute;
+    content: "";
+    background-color: var(--input-stroke);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 12.5rem;
+    margin: .3125rem;
+    transition: 0.4s;
+  }
+
+  & input:checked+.button {
+    background-color: var(--brand-light);
+  }
+
+  & input:checked+.button::before {
+    background-color: #fff;
+  }
+
+  & input:checked+.button::before {
+    transform: translateX(32px);
+  }
+}
