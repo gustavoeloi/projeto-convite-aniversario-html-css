@@ -73,3 +73,8 @@ aside {
 .flex-2 {
   flex: 2;
 }
+
+hr {
+  border: 1px solid var(--input-stroke);
+  margin-block: 3rem;
+}

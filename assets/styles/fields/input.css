@@ -33,3 +33,24 @@ input[type="datetime-local"] {
     opacity: 0;
   }
 }
+
+input {
+
+  &[required]+.error {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    color: var(--danger);
+    font: var(--body-xs);
+
+    margin-top: .5rem;
+  }
+
+  &:invalid {
+    border: 0.125rem solid var(--danger);
+  }
+
+  &:not(:focus):valid+.error {
+    display: none;
+  }
+}
